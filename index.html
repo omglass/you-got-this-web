@@ -1,0 +1,47 @@
+https://github.com/omglass/you-got-this-web/new/main
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You Got This</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>You Got This 🦄</h1>
+      <div id="quote-container">
+        <p id="quote-text">Tap the button to get your inspiration!</p>
+        <p id="quote-rarity"></p>
+      </div>
+      <div id="buttons">
+        <button id="daily-btn">Get Daily Quote</button>
+        <button id="ad-btn">Watch Ad for Extra Quote</button>
+        <button id="premium-btn">Go Premium (Remove ads)</button>
+        <button id="view-collection-btn">View Collection</button>
+      </div>
+      <div id="message" class="hidden"></div>
+    </div>
+
+    <!-- Ad overlay (simulated) -->
+    <div id="ad-overlay" class="hidden">
+      <div class="ad-content">
+        <p>Watching ad... please wait</p>
+      </div>
+    </div>
+
+    <!-- Collection overlay -->
+    <div id="collection-overlay" class="hidden">
+      <div class="collection-content">
+        <h2>Your Collection</h2>
+        <div id="collection-list"></div>
+        <!-- Added onclick to close button -->
+        <button id="close-collection-btn" onclick="hideCollection()">Close</button>
+      </div>
+    </div>
+
+    <script src="quotes.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
